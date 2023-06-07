@@ -15,10 +15,16 @@ function onsubmit(e){
         password:inputpassword.value
     })
     .then(res=>{
-        console.log(res)
+       
+
     })
     .catch(err=>{
-        console.log(err)
+        if(err.response.status===400){
+            const errormessage=err.response.data
+            console.log(errormessage)
+        }else{
+            console.log(err)
+        }
     })
 
 }
