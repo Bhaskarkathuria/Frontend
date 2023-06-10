@@ -14,7 +14,7 @@ function onlogin(e){
     })
     .then(()=>{
         alert("User logged in successfully")
-        location.replace('https://www.amazon.in/s?k=-amazon&hvadid=72499124504037&hvbmt=be&hvdev=c&hvqmt=e&tag=msndeskstdin-21&ref=pd_sl_5fksc5jb1x_e')
+        //location.replace('')
     }
     )
     .catch(err=>{
