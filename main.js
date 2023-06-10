@@ -9,14 +9,13 @@ submitform.addEventListener('click',onsubmit);
 
 function onsubmit(e){
     e.preventDefault();
-    axios.post('http://localhost:5000/todo',{
+    axios.post('http://localhost:5000/signup',{
         name:inputname.value,
         email:inputemail.value,
         password:inputpassword.value
     })
     .then(res=>{
        
-
     })
     .catch(err=>{
         if(err.response.status===400){
