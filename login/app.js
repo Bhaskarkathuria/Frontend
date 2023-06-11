@@ -14,7 +14,7 @@ function onlogin(e){
     })
     .then(()=>{
         alert("User logged in successfully")
-        //location.replace('')
+        location.replace('http://127.0.0.1:5500/inapp-features/index.html')
     }
     )
     .catch(err=>{
