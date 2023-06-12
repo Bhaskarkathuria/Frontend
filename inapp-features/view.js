@@ -58,7 +58,8 @@ function deletelist(e){
 }
 
 window.addEventListener('DOMContentLoaded',()=>{
-    axios.get('http://localhost:5000/expenses')
+    const token=localStorage.getItem('token')
+    axios.get('http://localhost:5000/expenses',{headers:{"Authorisation":token}})
     .then(res=>{
         res.data.forEach(element => {
         const expense=document.createElement('li');

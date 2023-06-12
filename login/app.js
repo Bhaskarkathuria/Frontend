@@ -12,8 +12,9 @@ function onlogin(e){
         email:email.value,
         password:password.value
     })
-    .then(()=>{
+    .then((res)=>{
         alert("User logged in successfully")
+        localStorage.setItem('token',res.data.token)
         location.replace('http://127.0.0.1:5500/inapp-features/index.html')
     }
     )
